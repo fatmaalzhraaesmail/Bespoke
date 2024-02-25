@@ -11,7 +11,9 @@ class CustomBtn extends StatelessWidget {
     this.width,
     this.radius,
     this.text,
+    this.borderColor,
     this.buttonColor,
+
     this.textColor,
     this.onTap,
   });
@@ -21,6 +23,7 @@ class CustomBtn extends StatelessWidget {
   final double? radius;
   final String? text;
   final Color? buttonColor;
+  final Color? borderColor;
   final Color? textColor;
   final Function()? onTap;
   @override
@@ -31,6 +34,7 @@ class CustomBtn extends StatelessWidget {
         width: width ?? MediaHelper.width,
         height: height ?? 56,
         decoration: BoxDecoration(
+          border: Border.all(color: borderColor ?? Colors.transparent),
           color: buttonColor ?? themeBloc.theme.valueOrNull!.primary,
           borderRadius: BorderRadius.circular(radius ?? 10),
         ),

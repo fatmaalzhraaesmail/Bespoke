@@ -1,4 +1,5 @@
 import 'package:bespoke/services/signin/pages/signin.dart';
+import 'package:bespoke/services/signup/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:bespoke/handlers/qr_code_scanner/qr_scanner_view.dart';
 import 'package:bespoke/routers/routers.dart';
@@ -30,6 +31,8 @@ class CustomNavigator {
     switch (settings.name) {
       case Routes.login:
         return _pageRoute( SignIn());
+      case Routes.register:
+        return _pageRoute( SignUp());
       case Routes.splash:
         return _pageRoute(const SplashPage());
       case Routes.qrScannerCode:

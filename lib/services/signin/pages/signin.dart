@@ -98,10 +98,13 @@ class _SignInState extends State<SignIn> {
                                   controller: emailcontroller,
                                   keyboardType: TextInputType.emailAddress,
                                   hintText: 'Your Email',
+                                                                    label: 'Your Email',
+
                                   onChange: (p0) {},
                                 ),
                                 TextInputField(
                                   hintText: 'Password',
+                                 label: 'Password',
                                   controller: passwordcontroller,
                                   keyboardType: TextInputType.visiblePassword,
                                   onChange: (p0) {},
